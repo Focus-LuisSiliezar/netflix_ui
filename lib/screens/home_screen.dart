@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_ui/data/data.dart';
 import 'package:netflix_ui/widgets/content_header.dart';
+import 'package:netflix_ui/widgets/content_list.dart';
 import 'package:netflix_ui/widgets/custom_app_bar.dart';
 import 'package:netflix_ui/widgets/previews.dart';
 
@@ -56,6 +57,28 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: EdgeInsets.only(top: 20.0),
             sliver: SliverToBoxAdapter(
               child: Previews(contentList: previews, title: "Previews"),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: ContentList(
+              title: 'My List',
+              contentList: myList,
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: ContentList(
+              title: 'Netflix Originals',
+              contentList: originals,
+              isOriginal: true,
+            ),
+          ),
+          SliverPadding(
+            padding: EdgeInsets.only(bottom: 20.0),
+            sliver: SliverToBoxAdapter(
+              child: ContentList(
+                title: "Trending",
+                contentList: trending,
+              ),
             ),
           ),
         ],
