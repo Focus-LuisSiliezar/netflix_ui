@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_ui/screens/nav_screen.dart';
 
 import 'screens/home_screen.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         scaffoldBackgroundColor: Colors.black,
       ),
-      home: HomeScreen(),
+      home: NavScreen(),
     );
   }
 }
