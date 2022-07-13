@@ -82,6 +82,7 @@ class _CustomAppBarDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(Assets.netflixLogo1),
           const SizedBox(width: 12.0),
@@ -116,12 +117,13 @@ class _CustomAppBarDesktop extends StatelessWidget {
           Expanded(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 IconButton(
                   onPressed: () => print("search"),
                   icon: const Icon(Icons.search),
-                  iconSize: 28.0,
                   color: Colors.white,
+                  alignment: Alignment.topCenter,
                 ),
                 _AppBarButton(
                   title: "KIDS",
@@ -134,13 +136,11 @@ class _CustomAppBarDesktop extends StatelessWidget {
                 IconButton(
                   onPressed: () => print("Gift"),
                   icon: const Icon(Icons.card_giftcard),
-                  iconSize: 28.0,
                   color: Colors.white,
                 ),
                 IconButton(
                   onPressed: () => print("Notificiations"),
                   icon: const Icon(Icons.notifications),
-                  iconSize: 28.0,
                   color: Colors.white,
                 ),
               ],
