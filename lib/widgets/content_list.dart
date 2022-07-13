@@ -30,7 +30,7 @@ class ContentList extends StatelessWidget {
               ),
             ),
           ),
-          Container(
+          SizedBox(
             height: isOriginal ? 500.0 : 220.0,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
@@ -42,7 +42,7 @@ class ContentList extends StatelessWidget {
                 return GestureDetector(
                   onTap: () => (content.name),
                   child: Container(
-                    margin: EdgeInsets.symmetric(horizontal: 8.0),
+                    margin: const EdgeInsets.symmetric(horizontal: 8.0),
                     height: isOriginal ? 400.0 : 200.0,
                     width: isOriginal ? 200.0 : 130.0,
                     decoration: BoxDecoration(
